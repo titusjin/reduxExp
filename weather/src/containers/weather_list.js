@@ -40,7 +40,13 @@ class WeatherList extends Component {
   }
 }
 
+
+// for the arguments "weathre" , originally we use the syntax like : state
+// but for ES6, cause we only use state.weathr in the body of the function.
+// As a result : we can shrten this like { weather }
 function mapStateToProps({ weather }) {
+    // return {weather : state.weather}
+    // In ES6, we can shorten it to { weather }
   return { weather };
 }
 
