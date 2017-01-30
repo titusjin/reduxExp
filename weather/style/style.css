@@ -12,6 +12,6 @@ td:first-of-type {
     width: 250px;
 }
 
-svg {
-    /*height: 150px;*/
+td > g {
+    height: 150px;
 }

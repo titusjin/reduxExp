@@ -16,6 +16,14 @@ class SearchBar extends Component {
     this.onFormSubmit = this.onFormSubmit.bind(this);
   }
 
+  /**
+     We can also use componentWillMount to implement the same bind
+     However, not recommand do that on this method
+     instead we shold do that on constructor
+   **/
+  componentWillMount(){
+  }
+
   onInputChange(event) {
     this.setState({ term: event.target.value });
   }
