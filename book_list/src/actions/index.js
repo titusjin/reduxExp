@@ -1,4 +1,4 @@
-function selectBook(book) {
+export default function selectBook(book) {
   // selectBook is an ActionCreator, it needs to return an action,
   // an object with property called : 'type'.
   return {
@@ -6,5 +6,3 @@ function selectBook(book) {
     payload: book
   };
 }
-
-export  { selectBook };
