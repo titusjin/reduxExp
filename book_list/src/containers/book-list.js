@@ -26,21 +26,23 @@ class BookList extends Component {
   }
 }
 
+// Whatever is returned will show up as props
+// inside of BookList
 function mapStateToProps(state) {
-    // here the state refers to application state.
-    // Whatever is returned will show up as props
-    // inside of BookList
+    // Here, State refers to application state.
+    // so if u use like : return { fdacda : 12r32eq}
+    // we can have this.props.fdacda and get 12r32eq as reture
 
     return {
         books: state.books
     };
 }
 
-// Anything returned from this function will end up as props
+// Anything returned form this function will end up as props
 // on the BookList container
 function mapDispatchToProps(dispatch) {
-  // Whenever selectBook is called, the result shoudl be passed
-  // to all of our reducers
+  // Whenever selectBook is called, the result should be passed
+  // to all of our reducers by the funnal disaptch
   return bindActionCreators({ selectBook: selectBook }, dispatch);
 }
 
