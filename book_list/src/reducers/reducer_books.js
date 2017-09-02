@@ -1,3 +1,4 @@
+// Using es6 syntax is workable cause currently all A++ grades borwser support it 
 export default () => {
     return [
         { title: 'Javascript: The Good Parts', pages: 101 },

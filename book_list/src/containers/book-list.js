@@ -4,37 +4,61 @@ import selectBook from '../actions/index';
 import { bindActionCreators } from 'redux';
 
 class BookList extends Component {
+
   renderList() {
     return this.props.books.map((book) => {
         return (
             <li
               key={book.title}
-              onClick={() => this.props.selectBook(book)}
-              className="list-group-item">
+              className="list-group-item"
+              onClick={() => this.props.selectBook(book)}>
               {book.title}
             </li>
         );
     });
   }
 
+  renderAuthors(){
+      console.log(this.props.authors);
+
+    return this.props.authors.map( (author) => {
+        return (
+            <li key={author.name} className = 'list-group-item'>
+                {author.name}
+            </li>
+        );
+    });
+  }
+
   render() {
+    console.log('are we here ??');
     return (
-      <ul className="list-group col-sm-4">
-        {this.renderList()}
-      </ul>
+        <div>
+            <ul className="list-group col-sm-4">
+                {this.renderList()}
+            </ul>
+            <ul className="list-group col-sm-4">
+                {this.renderAuthors()}
+            </ul>
+        </div>
     )
   }
 }
 
+/**
+ *  mapStateToProps & mapDispatchToProps all comes from react-redux module
+ */
 // Whatever is returned will show up as props
 // inside of BookList
 function mapStateToProps(state) {
     // Here, State refers to application state.
     // so if u use like : return { fdacda : 12r32eq}
-    // we can have this.props.fdacda and get 12r32eq as reture
+    // we can have this.props.fdacda and get 12r32eq as return
 
+    // No matter how many reducers in the applications we can all included into our container
     return {
-        books: state.books
+        books: state.books,
+        authors: state.authors
     };
 }
 
