@@ -19,6 +19,8 @@ class PostsNew extends Component {
   }
 
   render() {
+    // IN ES6 : const { handleSubmit } = this.props  === const{ handle}
+
     const { fields: { title, categories, content }, handleSubmit } = this.props;
 
     return (
