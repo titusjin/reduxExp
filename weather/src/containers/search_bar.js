@@ -80,4 +80,9 @@ function mapDispatchToProps(dispatch) {
   return bindActionCreators({ fetchWeather }, dispatch);
 }
 
+/**
+ * NOTE : The first augement is null :
+ * let redux know that this container don't need to know
+ * any application states at all.
+ */
 export default connect(null, mapDispatchToProps)(SearchBar);
