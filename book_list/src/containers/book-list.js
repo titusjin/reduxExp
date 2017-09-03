@@ -19,8 +19,6 @@ class BookList extends Component {
   }
 
   renderAuthors(){
-      console.log(this.props.authors);
-
     return this.props.authors.map( (author) => {
         return (
             <li key={author.name} className = 'list-group-item'>
@@ -64,10 +62,12 @@ function mapStateToProps(state) {
 
 // Anything returned form this function will end up as props
 // on the BookList container
+// as we use mapDispatchToProps : in this container we can all use this.props.selectBook to refers to the action creator.
 function mapDispatchToProps(dispatch) {
-  // Whenever selectBook is called, the result should be passed
-  // to all of our reducers by the funnal disaptch
-  return bindActionCreators({ selectBook }, dispatch);
+    // Whenever selectBook is called, the result should be passed
+    // to all of our reducers by the funnal disaptch
+    return bindActionCreators({ selectBook }, dispatch);
+    // return bindActionCreators({selectBook: selectBook}, dispatch);
 }
 
 // Promote BookList from a component to a container - it needs to know
