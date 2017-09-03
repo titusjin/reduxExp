@@ -50,7 +50,9 @@ class BookList extends Component {
 // inside of BookList
 function mapStateToProps(state) {
     // Here, State refers to application state.
-    // so if u use like : return { fdacda : 12r32eq}
+    //
+    // cause the return of this method will be acessed in the contianer
+    // as this.props. SO if u use like : return { fdacda : 12r32eq}
     // we can have this.props.fdacda and get 12r32eq as return
 
     // No matter how many reducers in the applications we can all included into our container

@@ -20,7 +20,7 @@ class SearchBar extends Component {
      We can also use componentWillMount to implement the same bind like :
      this.onInputChange = this.onInputChange.bind(this);
      this.onFormSubmit = this.onFormSubmit.bind(this);
-     
+
      However, not recommand do that on this method
      instead we shold do that on constructor
    **/
@@ -28,9 +28,24 @@ class SearchBar extends Component {
   }
 
   onInputChange(event) {
-    this.setState({ term: event.target.value });
+      this.setState({ term: event.target.value });
   }
+  /**
+   * according to one Q&A : above onInputChange method can be rewrited
+   * like below and without the need to do {bind} in constructor
+   */
+  // onInputChange = event => {
+  //     this.setState({ term : event.target.value });
+  //     console.log('the state change to : ', this.state);
+  // }
+  //
 
+
+
+  /**
+   *  Just use form submit handler to both handle the key press and
+   *  hitting button user interactoin.
+   */
   onFormSubmit(event) {
     event.preventDefault();
 
@@ -38,7 +53,8 @@ class SearchBar extends Component {
     this.props.fetchWeather(this.state.term);
 
     // open below : search bar text will be cleaned up after from is submit
-    // this.setState({ term: '' });
+    // Cause in action : axios is a promise.
+    this.setState({ term: '' });
   }
 
   render() {
