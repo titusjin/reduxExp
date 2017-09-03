@@ -14,6 +14,11 @@ export function fetchWeather(city) {
     // axos.get returns one promise object and the reason that we can directly
     // return the promise as payload to reducers :
     // we adopt redux-promise middleware
+    // this middleware takes actions handling promise , will stop the action
+    // and wait the async api calling finished and make one new action with
+    // api result with the same acitn - type
+    // So we can not adopt redux-promise module just make one then statement
+    // after axios.get 
     const promiseRequest = axios.get(url);
 
     return {
