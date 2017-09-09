@@ -23,6 +23,8 @@ class SearchBar extends Component {
 
      However, not recommand do that on this method
      instead we shold do that on constructor
+
+     Can check the reactjs official document.
    **/
   componentWillMount(){
   }

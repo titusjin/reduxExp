@@ -17,8 +17,7 @@ export function fetchWeather(city) {
     // this middleware takes actions handling promise , will stop the action
     // and wait the async api calling finished and make one new action with
     // api result with the same acitn - type
-    // So we can not adopt redux-promise module just make one then statement
-    // after axios.get 
+    // So we can do then just after axios.get without redux-promise module.
     const promiseRequest = axios.get(url);
 
     return {
