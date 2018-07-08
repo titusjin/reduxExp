@@ -67,7 +67,7 @@ function mapStateToProps(state) {
 // as we use mapDispatchToProps : in this container we can all use this.props.selectBook to refers to the action creator.
 function mapDispatchToProps(dispatch) {
     // Whenever selectBook is called, the result should be passed
-    // to all of our reducers by the funnal disaptch
+    // to all of our reducers by disaptch(like a tunnel)
     return bindActionCreators({ selectBook }, dispatch);
     // return bindActionCreators({selectBook: selectBook}, dispatch);
 }
