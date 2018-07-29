@@ -1,8 +1,15 @@
+<<<<<<< HEAD
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
 import Chart from '../components/chart';
 import GoogleMap from '../components/google_map';
+=======
+import React, { Component } from "react";
+import { connect } from "react-redux";
+import Chart from "../components/chart";
+import GoogleMap from "../components/google_map";
+>>>>>>> upstream/master
 
 class WeatherList extends Component {
   renderWeather(cityData) {
@@ -41,6 +48,7 @@ class WeatherList extends Component {
   }
 }
 
+<<<<<<< HEAD
 
 // for the arguments "weathre" , originally we use the syntax like : state
 // but for ES6, cause we only use state.weathr in the body of the function.
@@ -51,6 +59,10 @@ function mapStateToProps({ weather }) {
     // In ES6, we can shorten it to { weather }
   return { weather };  
   //ES6 syntax sugar : {weathre : weather } can be always shorten to { weathre }
+=======
+function mapStateToProps({ weather }) {
+  return { weather };
+>>>>>>> upstream/master
 }
 
 export default connect(mapStateToProps)(WeatherList);

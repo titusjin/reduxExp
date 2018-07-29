@@ -1,6 +1,12 @@
+<<<<<<< HEAD
 import React from 'react';
 
 const VideoListItem = ({video, onVideoSelect}) => {
+=======
+import React from "react";
+
+const VideoListItem = ({ video, onVideoSelect }) => {
+>>>>>>> upstream/master
   const imageUrl = video.snippet.thumbnails.default.url;
 
   return (

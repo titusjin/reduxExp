@@ -5,7 +5,11 @@
   "main": "index.js",
   "repository": "git@github.com:StephenGrider/ReduxSimpleStarter.git",
   "scripts": {
+<<<<<<< HEAD
     "start": "./node_modules/webpack-dev-server/bin/webpack-dev-server.js"
+=======
+    "start": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js"
+>>>>>>> upstream/master
   },
   "author": "",
   "license": "ISC",
@@ -21,8 +25,13 @@
     "axios": "^0.8.1",
     "babel-preset-stage-1": "^6.1.18",
     "lodash": "^3.10.1",
+<<<<<<< HEAD
     "react": "^15.4.1",
     "react-dom": "^15.4.1",
+=======
+    "react": "^0.14.3",
+    "react-dom": "^0.14.3",
+>>>>>>> upstream/master
     "react-google-maps": "^4.7.1",
     "react-redux": "^4.0.0",
     "react-sparklines": "^1.4.2",
