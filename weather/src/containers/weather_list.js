@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+
 import Chart from '../components/chart';
 import GoogleMap from '../components/google_map';
 
@@ -43,11 +44,13 @@ class WeatherList extends Component {
 
 // for the arguments "weathre" , originally we use the syntax like : state
 // but for ES6, cause we only use state.weathr in the body of the function.
-// As a result : we can shorten this like { weather }
+// As a result : we can shorten this like { weather } same as the result : 
+// let weather = state.weather
 function mapStateToProps({ weather }) {
     // return {weather : state.weather}
     // In ES6, we can shorten it to { weather }
-  return { weather };
+  return { weather };  
+  //ES6 syntax sugar : {weathre : weather } can be always shorten to { weathre }
 }
 
 export default connect(mapStateToProps)(WeatherList);

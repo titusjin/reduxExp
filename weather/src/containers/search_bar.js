@@ -55,7 +55,7 @@ class SearchBar extends Component {
     this.props.fetchWeather(this.state.term);
 
     // open below : search bar text will be cleaned up after from is submit
-    // Cause in action : axios is a promise.
+    // Cause in action : axios is a promise.  
     this.setState({ term: '' });
   }
 
@@ -83,7 +83,7 @@ function mapDispatchToProps(dispatch) {
 }
 
 /**
- * NOTE : The first augement is null :
+ * NOTE : The first augement is null :  
  * let redux know that this container don't need to know
  * any application states at all.
  */

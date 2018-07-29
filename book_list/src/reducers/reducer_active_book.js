@@ -4,9 +4,11 @@
 // 1. Why set initial value of state = null : cause reux not allowed reducers
 // return undifined value .
 export default (state = null, action) => {
+    let payload = action.payloads;
+
     switch(action.type) {
         case 'BOOK_SELECTED':
-            return aciton.payload;
+            return {...state, payload};
     }
 
     return state;

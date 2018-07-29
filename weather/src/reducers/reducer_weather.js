@@ -6,11 +6,11 @@ export default function(state = [], action) {
         // first we can use like : state.push(action.payload.data)
         // to make the state updated with new fetching weather data.
         // But in Redux : we don't manipulate state directly
-        //  so better we do is : state.concate(action.payload.data)
+        // so better we do is : state.concate(action.payload.data)
 
-            // Also in ES6 we can do like below just the same as :
-            // state.concate(action.payload.data)
-            return [ action.payload.data, ...state ];
+        // Also in ES6 we can do like below just the same as :
+        // state.concate(action.payload.data)
+        return [ action.payload.data, ...state ];
     }
     return state;
 }
