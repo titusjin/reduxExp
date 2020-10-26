@@ -70,9 +70,8 @@ GEM
     nokogiri (1.6.7.1)
       mini_portile2 (~> 2.0.0.rc2)
     obscenity (1.0.2)
-    puma (2.9.1)
-      rack (>= 1.1, < 2.0)
-    rack (1.6.4)
+    puma (3.12.6)
+    rack (1.6.13)
     rack-attack (4.3.1)
       rack
     rack-cors (0.4.0)
