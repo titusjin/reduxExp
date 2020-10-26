@@ -1,7 +1,5 @@
 # ReduxCasts
 
-<<<<<<< HEAD
-=======
 Completed code examples from [Modern React with Redux](https://udemy.com/react-redux)
 
 >>>>>>> upstream/master
